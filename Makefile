@@ -1,7 +1,7 @@
 export PYTHONPATH := plugins/mkdocs-uktre-glossary-plugin/src:$(PYTHONPATH)
 
 # https://lychee.cli.rs/usage/cli/
-LYCHEE_ARGS := --no-progress --include-fragments --index-files index.html --root-dir $(PWD)/site/ site/index.html
+LYCHEE_ARGS := --no-progress --include-fragments --user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:153.0) Gecko/20100101 Firefox/153.0" --index-files index.html --root-dir $(PWD)/site/ site/index.html
 
 pre-build:
 	python ./plugins/create_category_pages.py
